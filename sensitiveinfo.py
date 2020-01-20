@@ -6,25 +6,32 @@ class Patient():
         self.__social = social
         self.__birth = birth
         self.__insurance = insurance 
+        self.__first_name = first_name
+        self.__last_name = last_name
         self.__address = address
 #fullname = firstname + lastname
     # def full_name(self):
     #     return (f"{first_name}  {last_name}")
 
 #SSN
-    # @property # The getter
-    # def social(self):
-    #     try:
-    #         return self.__social # Note there are 2 underscores here
-    #     except AttributeError:
-    #         return "No SSN"
+    @property # The getter
+    def social(self):
+            return self.__social
 
-    # @property
-    # def full_name(self):
-    #     try:
-    #         return f"{self.first_name} {self.last_name}"
-    #     except AttributeError:
-    #         return "no full name, sry"
+#BIRTHDAY
+    @property # The getter
+    def birth(self):
+            return self.__birth
+
+#INSURANCE
+    @property # The getter
+    def insurance(self):
+            return self.__insurance
+
+#FULL NAME!!!!!!!
+    @property
+    def full_name(self):
+            return f"{self.__first_name} {self.__last_name}"
 
 # ADDRESS GETTER
     @property 
@@ -39,22 +46,10 @@ class Patient():
         if type(address) is str:
             self.__address = address
         else:
-            raise TypeError('Please enter a number')
-#SSN!!!!!!!!!!!!!!!!!!!!!!!!!
-    @property 
-    def social(self):
-        try:
-            return self.__social # Note there are 2 underscores here
-        except AttributeError:
-            return "No SSN"
-
-    # @first_name.setter # The setter
-    # def first_name(self, first_name):
-    #     if type(first_name) is str:
-    #         self.__first_name = first_name
-    #     else:
-    #         raise TypeError('Please provide a name')
+            raise TypeError('Please enter an address')
 
 erin = Patient("666-66-6666", "11/06/85", 666, "Erin", "Polley", "666 Satan St")
 
-print(erin.social)
+print(erin.social) 
+print(erin.full_name)
+# print(erin.first_name)4
