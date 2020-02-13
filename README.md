@@ -1,3 +1,3 @@
-# python-book1-chapter11-classprops
+# Python: Getters and Setters
 
 Practiced getters and setters, double underscore making class attributes private.
